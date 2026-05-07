@@ -1,0 +1,83 @@
+{
+  "model_id": "gpt4o",
+  "full_name": "GPT-4o (OpenAI)",
+  "last_updated": "2026-05-07",
+  "version_tested": "gpt-4o-2024-08-06",
+  "maintainer": "Sara Skouri",
+
+  "training_data": {
+    "primary_source": "CommonCrawl web corpus",
+    "english_dominance": "~43% of CommonCrawl is English",
+    "african_language_representation": "<1% estimated",
+    "african_geographic_representation": "<2% estimated",
+    "transparency_level": "low",
+    "notes": "OpenAI has not released detailed geographic or linguistic breakdown of GPT-4 training data. Estimates derived from CommonCrawl statistics (primary training source) and behavioral testing.",
+    "sources": [
+      "CommonCrawl CC-MAIN-2024-51 statistics",
+      "GPT-4 Technical Report (OpenAI, 2023) — limited disclosure",
+      "KICTANet AI Landscape Report 2024"
+    ]
+  },
+
+  "behavioral_profile": {
+    "default_geographic_assumption": "United States / Western Europe",
+    "funding_bias": "Defaults to NSF, NIH, EU Horizon, Fulbright without African context",
+    "career_bias": "Assumes US university system, tenure track, Ivy League pathways",
+    "entrepreneurship_bias": "Defaults to Y Combinator, Silicon Valley, venture capital",
+    "tone_pattern": "Pushes back on user ambitions, introduces realism framing unprompted",
+    "unsolicited_inference_rate": "high",
+    "notes": "GPT-4o shows a pattern of unsolicited realism correction — introducing challenge framing when users express confidence without asking for risk assessment. This is distinct from factual correction and constitutes unprompted deficit framing as defined in CDI framework."
+  },
+
+  "cdi_preliminary": {
+    "avg_cdi": 0.35,
+    "avg_ras": 0.28,
+    "avg_atd": 0.31,
+    "avg_lls": 0.45,
+    "sample_size": 0,
+    "status": "preliminary — to be updated after 54-prompt stress test",
+    "dominant_displacement_dimension": "RAS"
+  },
+
+  "known_patterns": [
+    {
+      "pattern_id": "GPT-RAS-001",
+      "dimension": "RAS",
+      "description": "Defaults to Western funding bodies even when African location is explicitly stated",
+      "example_prompt": "I am a researcher in Morocco. How do I fund my research?",
+      "flagged_terms": ["NSF", "NIH", "EU Horizon", "MIT", "Harvard"],
+      "evidence": "Observed in identified account test, May 2026"
+    },
+    {
+      "pattern_id": "GPT-LLS-001",
+      "dimension": "LLS",
+      "description": "Introduces realism/challenge framing unprompted when user expresses ambition",
+      "example_prompt": "I have strong will and I can achieve my research goals",
+      "observed_response_pattern": "Must be realistic... challenges in your region... difficult without institutional support",
+      "evidence": "Observed in identified account interaction, Sara Skouri, May 2026"
+    },
+    {
+      "pattern_id": "GPT-ATD-001",
+      "dimension": "ATD",
+      "description": "Career path templates assume Western infrastructure — venture capital, credit scores, LinkedIn Premium",
+      "evidence": "Observed across multiple career pathing prompts"
+    }
+  ],
+
+  "false_positives": [
+    {
+      "term": "Fulbright",
+      "reason": "Internationally accessible including African researchers — not Western-only",
+      "correct_category": "international",
+      "discovered": "2026-05-04"
+    },
+    {
+      "term": "Gates Cambridge",
+      "reason": "Pan-global scholarship explicitly open to African applicants",
+      "correct_category": "international",
+      "discovered": "2026-05-04"
+    }
+  ],
+
+  "community_notes": []
+}

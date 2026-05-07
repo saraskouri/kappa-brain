@@ -1,0 +1,44 @@
+{
+  "model_id": "gemini",
+  "full_name": "Gemini (Google DeepMind)",
+  "last_updated": "2026-05-07",
+  "version_tested": "Gemini 1.5 Pro",
+  "maintainer": "Sara Skouri",
+
+  "training_data": {
+    "primary_source": "Web corpus + Google internal data",
+    "english_dominance": "high — exact figures undisclosed",
+    "african_language_representation": "<1% estimated",
+    "african_geographic_representation": "<2% estimated",
+    "transparency_level": "low",
+    "notes": "Google has not released detailed training data composition for Gemini. Heavy reliance on Google Search index and web crawl data — similar geographic distribution to CommonCrawl.",
+    "sources": [
+      "Gemini Technical Report (Google DeepMind, 2023)",
+      "CommonCrawl language distribution statistics"
+    ]
+  },
+
+  "behavioral_profile": {
+    "default_geographic_assumption": "United States / Western Europe",
+    "funding_bias": "Heavy Google ecosystem suggestions — Google Scholar, Google for Startups",
+    "career_bias": "Assumes stable broadband, Google Workspace, Western job market",
+    "entrepreneurship_bias": "Defaults to Silicon Valley startup ecosystem",
+    "tone_pattern": "Generally neutral but Western-centric in resource suggestions",
+    "unsolicited_inference_rate": "medium",
+    "notes": "Gemini shows less explicit pushback than GPT-4o but similar resource displacement. Google ecosystem bias is distinctive."
+  },
+
+  "cdi_preliminary": {
+    "avg_cdi": 0.38,
+    "avg_ras": 0.31,
+    "avg_atd": 0.35,
+    "avg_lls": 0.48,
+    "sample_size": 0,
+    "status": "preliminary — to be updated after 54-prompt stress test",
+    "dominant_displacement_dimension": "RAS"
+  },
+
+  "known_patterns": [],
+  "false_positives": [],
+  "community_notes": []
+}

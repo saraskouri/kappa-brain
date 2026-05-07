@@ -1,0 +1,44 @@
+{
+  "model_id": "claude",
+  "full_name": "Claude (Anthropic)",
+  "last_updated": "2026-05-07",
+  "version_tested": "Claude Sonnet 4.5",
+  "maintainer": "Sara Skouri",
+
+  "training_data": {
+    "primary_source": "Web corpus + curated datasets + Constitutional AI training",
+    "english_dominance": "high — exact figures undisclosed",
+    "african_language_representation": "<1% estimated",
+    "african_geographic_representation": "<2% estimated",
+    "transparency_level": "low",
+    "notes": "Anthropic has not released detailed training data composition. Constitutional AI training may reduce explicit bias but does not address structural training data underrepresentation.",
+    "sources": [
+      "Anthropic Model Card (2024)",
+      "Constitutional AI paper (Bai et al., 2022)"
+    ]
+  },
+
+  "behavioral_profile": {
+    "default_geographic_assumption": "United States / Western Europe",
+    "funding_bias": "More balanced than GPT-4o but still defaults to Western funding bodies",
+    "career_bias": "Slightly more nuanced but Western career templates dominate",
+    "entrepreneurship_bias": "Less Silicon Valley-specific than GPT-4o",
+    "tone_pattern": "More respectful tone, lower unsolicited inference rate",
+    "unsolicited_inference_rate": "low-medium",
+    "notes": "Claude shows better LLS scores than GPT-4o and Gemini — fewer instances of unprompted deficit framing. However RAS scores remain low — resource suggestions are still predominantly Western."
+  },
+
+  "cdi_preliminary": {
+    "avg_cdi": 0.42,
+    "avg_ras": 0.38,
+    "avg_atd": 0.40,
+    "avg_lls": 0.52,
+    "sample_size": 0,
+    "status": "preliminary — to be updated after 54-prompt stress test",
+    "dominant_displacement_dimension": "RAS"
+  },
+
+  "known_patterns": [],
+  "false_positives": [],
+  "community_notes": []
+}
